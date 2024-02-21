@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pdm install
+
+      - name: Build
+        run: pdm run exe
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gbfr_auto_restart
+          path: gbfr_auto_restart.exe
