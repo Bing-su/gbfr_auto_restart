@@ -36,3 +36,4 @@ exe = { cmd = [
 ] }
 
 encode = { cmd = ["python", "encode.py"] }
+export = { cmd = ["pdm", "export", "-o", "requirements.txt", "-G", "build"] }
