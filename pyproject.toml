@@ -3,7 +3,7 @@ name = "gbfr-auto-restart"
 version = "0.1.0-dev.0"
 description = "Granblue Fantasy Relink Auto Restart"
 authors = [{ name = "Dowon", email = "ks2515@naver.com" }]
-dependencies = ["pyautogui", "pillow"]
+dependencies = ["pyautogui", "pillow", "rich"]
 requires-python = ">=3.11"
 readme = "README.md"
 license = { text = "GPL-3.0-or-later" }
@@ -15,7 +15,6 @@ build = ["nuitka>=2.0.3"]
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
 
 [tool.pdm]
 distribution = true
