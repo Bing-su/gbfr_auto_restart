@@ -22,6 +22,9 @@ build-backend = "pdm.backend"
 [tool.pdm]
 distribution = true
 
+[tool.pdm.build]
+includes = ["gbfr_auto_restart.py"]
+
 [tool.pdm.scripts]
 exe = { cmd = [
     "python",
