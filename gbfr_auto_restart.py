@@ -3,6 +3,7 @@ from base64 import b85decode
 from contextlib import suppress
 from io import BytesIO
 
+import cv2  # noqa: F401
 import pyautogui
 from PIL import Image
 from rich.console import Console
