@@ -177,3 +177,8 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 data.py
+
+gbfr_auto_restart.build/
+gbfr_auto_restart.dist/
+gbfr_auto_restart.onefile-build/
+gbfr_auto_restart.exe

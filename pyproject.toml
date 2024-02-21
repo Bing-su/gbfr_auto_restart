@@ -18,3 +18,15 @@ build-backend = "pdm.backend"
 
 [tool.pdm]
 distribution = true
+
+[tool.pdm.scripts]
+exe = { cmd = [
+    "python",
+    "-m",
+    "nuitka",
+    "--standalone",
+    "--onefile",
+    "gbfr_auto_restart.py",
+] }
+
+encode = { cmd = ["python", "encode.py"] }
