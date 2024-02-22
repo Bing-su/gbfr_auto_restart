@@ -17,5 +17,5 @@ with data.open("w", encoding="utf-8") as file:
 
         encoded = b85encode(img.read_bytes()).decode("utf-8")
 
-        file.write(f'    "{img.stem}": "{encoded}"\n')
+        file.write(f'    "{img.stem}": "{encoded}",\n')
     file.write("}\n")
