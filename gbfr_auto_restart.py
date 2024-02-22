@@ -71,6 +71,7 @@ class INPUT(ctypes.Structure):
 
 
 LPINPUT = ctypes.POINTER(INPUT)
+# msdn.microsoft.com/en-us/library/dd375731
 W = 0x57
 ENTER = 0x0D
 
@@ -113,7 +114,7 @@ def run():
                 press(W)
                 time.sleep(0.5)
                 press(ENTER)
-                con.log("[green]Restarted![/green]")
+                con.log("[green]Restart![/green]")
 
             time.sleep(3)
 
