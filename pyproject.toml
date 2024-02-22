@@ -1,6 +1,6 @@
 [project]
 name = "gbfr-auto-restart"
-version = "0.1.0-dev.2"
+version = "0.1.0"
 description = "Granblue Fantasy Relink Auto Restart"
 authors = [{ name = "Dowon", email = "ks2515@naver.com" }]
 dependencies = ["pyautogui", "pillow", "rich", "opencv-python"]
