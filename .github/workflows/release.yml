@@ -15,20 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: pdm-project/setup-pdm@v4
         with:
           python-version: 3.11
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pdm install
 
       - name: Build
-        uses: Nuitka/Nuitka-Action@main
-        with:
-          script-name: gbfr_auto_restart.py
-          onefile: true
+        run: pdm run exe
 
       - uses: actions/upload-artifact@v4
         with:
           name: gbfr_auto_restart
-          path: build/*.exe
+          path: gbfr_auto_restart.exe

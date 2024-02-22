@@ -30,7 +30,7 @@ exe = { cmd = [
     "python",
     "-m",
     "nuitka",
-    "--standalone",
+    "--assume-yes-for-downloads",
     "--onefile",
     "gbfr_auto_restart.py",
 ] }
