@@ -115,7 +115,7 @@ def run():
                 press(ENTER)
                 con.log("[green]Restarted![/green]")
 
-            time.sleep(1)
+            time.sleep(3)
 
 
 def main():
