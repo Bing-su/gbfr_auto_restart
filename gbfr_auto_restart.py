@@ -1,5 +1,6 @@
 import ctypes
 import time
+import os
 from base64 import b85decode
 from contextlib import suppress
 from ctypes import wintypes
@@ -95,7 +96,7 @@ def found_any_image(images: dict[str, Image.Image]) -> bool:  # noqa: FA102
     for image in images.values():
         try:
             pyautogui.locateCenterOnScreen(
-                image, grayscale=True, confidence=0.5
+                image, grayscale=True, confidence=int(os.getenv("CONFIDENCE", 0.6))
             )  # pyright: ignore [reportCallIssue]
         except pyautogui.ImageNotFoundException:
             continue
