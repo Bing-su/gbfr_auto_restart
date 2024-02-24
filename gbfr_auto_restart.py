@@ -120,7 +120,7 @@ def run():
 
 
 def main():
-    with suppress(Exception, KeyboardInterrupt):
+    with suppress(KeyboardInterrupt):
         run()
 
 
