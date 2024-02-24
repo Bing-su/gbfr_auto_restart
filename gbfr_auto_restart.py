@@ -6,7 +6,7 @@ from ctypes import wintypes
 from io import BytesIO
 
 import cv2  # noqa: F401
-import pyautogui
+import pyscreeze
 from PIL import Image
 from rich.console import Console
 
@@ -92,15 +92,15 @@ def press(key: int, interval: float = 0.1):
     release_key(key)
 
 
-def found_any_image(images: dict[str, Image.Image]) -> bool:  # noqa: FA102
+def found_any_image(images: dict[str, Image.Image]) -> bool:
     for image in images.values():
         try:
-            pyautogui.locateCenterOnScreen(
+            result = pyscreeze.locateCenterOnScreen(
                 image, grayscale=False, confidence=0.95
             )  # pyright: ignore [reportCallIssue]
-        except pyautogui.ImageNotFoundException:
+        except pyscreeze.ImageNotFoundException:
             continue
-        return True
+        return result is not None
     return False
 
 

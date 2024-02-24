@@ -5,7 +5,7 @@
 groups = ["default", "dev", "build"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:2866cf69cd02c5ed9532a65b322b8331d63ea66c633559b416e985e5665bed84"
+content_hash = "sha256:cc5508c3de64b3ae0e8a094cdc83be1d8eab240eae20e151197bc1ff5f2e0b34"
 
 [[package]]
 name = "black"
@@ -170,20 +170,6 @@ groups = ["default"]
 files = [
     {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
-]
-
-[[package]]
-name = "mouseinfo"
-version = "0.1.3"
-summary = "An application to display XY position and RGB color information for the pixel currently under the mouse. Works on Python 2 and 3."
-groups = ["default"]
-dependencies = [
-    "pyperclip",
-    "python3-Xlib; platform_system == \"Linux\" and python_version >= \"3.0\"",
-    "rubicon-objc; platform_system == \"Darwin\"",
-]
-files = [
-    {file = "MouseInfo-0.1.3.tar.gz", hash = "sha256:2c62fb8885062b8e520a3cce0a297c657adcc08c60952eb05bc8256ef6f7f6e7"},
 ]
 
 [[package]]
@@ -427,25 +413,6 @@ files = [
 ]
 
 [[package]]
-name = "pyautogui"
-version = "0.9.54"
-summary = "PyAutoGUI lets Python control the mouse and keyboard, and other GUI automation tasks. For Windows, macOS, and Linux, on Python 3 and 2."
-groups = ["default"]
-dependencies = [
-    "mouseinfo",
-    "pygetwindow>=0.0.5",
-    "pymsgbox",
-    "pyobjc-core; platform_system == \"Darwin\"",
-    "pyobjc-framework-quartz; platform_system == \"Darwin\"",
-    "pyscreeze>=0.1.21",
-    "python3-Xlib; platform_system == \"Linux\" and python_version >= \"3.0\"",
-    "pytweening>=1.0.4",
-]
-files = [
-    {file = "PyAutoGUI-0.9.54.tar.gz", hash = "sha256:dd1d29e8fd118941cb193f74df57e5c6ff8e9253b99c7b04f39cfc69f3ae04b2"},
-]
-
-[[package]]
 name = "pycparser"
 version = "2.21"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -455,18 +422,6 @@ marker = "platform_python_implementation == \"PyPy\""
 files = [
     {file = "pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"},
     {file = "pycparser-2.21.tar.gz", hash = "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"},
-]
-
-[[package]]
-name = "pygetwindow"
-version = "0.0.9"
-summary = "A simple, cross-platform module for obtaining GUI information on application's windows."
-groups = ["default"]
-dependencies = [
-    "pyrect",
-]
-files = [
-    {file = "PyGetWindow-0.0.9.tar.gz", hash = "sha256:17894355e7d2b305cd832d717708384017c1698a90ce24f6f7fbf0242dd0a688"},
 ]
 
 [[package]]
@@ -481,79 +436,6 @@ files = [
 ]
 
 [[package]]
-name = "pymsgbox"
-version = "1.0.9"
-summary = "A simple, cross-platform, pure Python module for JavaScript-like message boxes."
-groups = ["default"]
-files = [
-    {file = "PyMsgBox-1.0.9.tar.gz", hash = "sha256:2194227de8bff7a3d6da541848705a155dcbb2a06ee120d9f280a1d7f51263ff"},
-]
-
-[[package]]
-name = "pyobjc-core"
-version = "10.1"
-requires_python = ">=3.8"
-summary = "Python<->ObjC Interoperability Module"
-groups = ["default"]
-marker = "platform_system == \"Darwin\""
-files = [
-    {file = "pyobjc-core-10.1.tar.gz", hash = "sha256:1844f1c8e282839e6fdcb9a9722396c1c12fb1e9331eb68828a26f28a3b2b2b1"},
-    {file = "pyobjc_core-10.1-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:fe1b9987b7b0437685fb529832876c2a8463500114960d4e76bb8ae96b6bf208"},
-    {file = "pyobjc_core-10.1-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:9f628779c345d3abd0e20048fb0e256d894c22254577a81a6dcfdb92c3647682"},
-]
-
-[[package]]
-name = "pyobjc-framework-cocoa"
-version = "10.1"
-requires_python = ">=3.8"
-summary = "Wrappers for the Cocoa frameworks on macOS"
-groups = ["default"]
-marker = "platform_system == \"Darwin\""
-dependencies = [
-    "pyobjc-core>=10.1",
-]
-files = [
-    {file = "pyobjc-framework-Cocoa-10.1.tar.gz", hash = "sha256:8faaf1292a112e488b777d0c19862d993f3f384f3927dc6eca0d8d2221906a14"},
-    {file = "pyobjc_framework_Cocoa-10.1-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0860a9beb7e5c72a1f575679a6d1428a398fa19ad710fb116df899972912e304"},
-    {file = "pyobjc_framework_Cocoa-10.1-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:34b791ea740e1afce211f19334e45469fea9a48d8fce5072e146199fd19ff49f"},
-]
-
-[[package]]
-name = "pyobjc-framework-quartz"
-version = "10.1"
-requires_python = ">=3.8"
-summary = "Wrappers for the Quartz frameworks on macOS"
-groups = ["default"]
-marker = "platform_system == \"Darwin\""
-dependencies = [
-    "pyobjc-core>=10.1",
-    "pyobjc-framework-Cocoa>=10.1",
-]
-files = [
-    {file = "pyobjc-framework-Quartz-10.1.tar.gz", hash = "sha256:b7439c0a3be9590d261cd2d340ba8dd24a75877b0be3ebce56e022a19cc05738"},
-    {file = "pyobjc_framework_Quartz-10.1-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:2ddcd18e96511e618ce43e288a043e25524c131f5e6d58775db7aaf15553d849"},
-    {file = "pyobjc_framework_Quartz-10.1-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:c4257a2fb5580e5ebe927a66cf36a11749685a4681a30f90e954a3f08894cb62"},
-]
-
-[[package]]
-name = "pyperclip"
-version = "1.8.2"
-summary = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
-groups = ["default"]
-files = [
-    {file = "pyperclip-1.8.2.tar.gz", hash = "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"},
-]
-
-[[package]]
-name = "pyrect"
-version = "0.2.0"
-summary = "PyRect is a simple module with a Rect class for Pygame-like rectangular areas."
-groups = ["default"]
-files = [
-    {file = "PyRect-0.2.0.tar.gz", hash = "sha256:f65155f6df9b929b67caffbd57c0947c5ae5449d3b580d178074bffb47a09b78"},
-]
-
-[[package]]
 name = "pyscreeze"
 version = "0.1.30"
 summary = "A simple, cross-platform screenshot module for Python 2 and 3."
@@ -565,25 +447,6 @@ dependencies = [
 ]
 files = [
     {file = "PyScreeze-0.1.30.tar.gz", hash = "sha256:74098ad048e76a6231dcfa6243343af94459b8c829f9ccb7a44a5d3b147a67d1"},
-]
-
-[[package]]
-name = "python3-xlib"
-version = "0.15"
-summary = "Python3 X Library"
-groups = ["default"]
-marker = "platform_system == \"Linux\" and python_version >= \"3.0\""
-files = [
-    {file = "python3-xlib-0.15.tar.gz", hash = "sha256:dc4245f3ae4aa5949c1d112ee4723901ade37a96721ba9645f2bfa56e5b383f8"},
-]
-
-[[package]]
-name = "pytweening"
-version = "1.2.0"
-summary = "A collection of tweening (aka easing) functions."
-groups = ["default"]
-files = [
-    {file = "pytweening-1.2.0.tar.gz", hash = "sha256:243318b7736698066c5f362ec5c2b6434ecf4297c3c8e7caa8abfe6af4cac71b"},
 ]
 
 [[package]]
@@ -624,18 +487,6 @@ dependencies = [
 files = [
     {file = "rich-13.7.0-py3-none-any.whl", hash = "sha256:6da14c108c4866ee9520bbffa71f6fe3962e193b7da68720583850cd4548e235"},
     {file = "rich-13.7.0.tar.gz", hash = "sha256:5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"},
-]
-
-[[package]]
-name = "rubicon-objc"
-version = "0.4.7"
-requires_python = ">=3.8"
-summary = "A bridge between an Objective C runtime environment and Python."
-groups = ["default"]
-marker = "platform_system == \"Darwin\""
-files = [
-    {file = "rubicon-objc-0.4.7.tar.gz", hash = "sha256:be937d864bd1229f860defabb89b40c53634eedc36448d89ad3c14eb3286e509"},
-    {file = "rubicon_objc-0.4.7-py3-none-any.whl", hash = "sha256:f37108e35d5da1a78ab3eed2d03b095934f5f618329a939e4bd2ada9894eff6e"},
 ]
 
 [[package]]

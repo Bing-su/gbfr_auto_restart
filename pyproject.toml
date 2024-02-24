@@ -1,9 +1,9 @@
 [project]
 name = "gbfr-auto-restart"
-version = "0.1.0"
+version = "0.2.0.dev-0"
 description = "Granblue Fantasy Relink Auto Restart"
 authors = [{ name = "Dowon", email = "ks2515@naver.com" }]
-dependencies = ["pyautogui", "pillow", "rich", "opencv-python"]
+dependencies = ["pyscreeze", "pillow", "rich", "opencv-python"]
 requires-python = ">=3.9"
 readme = "README.md"
 license = { text = "MIT" }
@@ -36,4 +36,32 @@ exe = { cmd = [
 ] }
 
 encode = { cmd = ["python", "encode.py"] }
-export = { cmd = ["pdm", "export", "-o", "requirements.txt", "-G", "build"] }
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "B",
+    "C4",
+    "C90",
+    "E",
+    "EM",
+    "F",
+    "FA",
+    "FBT",
+    "FURB",
+    "I001",
+    "ISC",
+    "N",
+    "PERF",
+    "PIE",
+    "PT",
+    "PTH",
+    "RET",
+    "RUF",
+    "SIM",
+    "T20",
+    "UP",
+    "W",
+]
+ignore = ["B008", "B905", "E501"]
+unfixable = ["F401"]
