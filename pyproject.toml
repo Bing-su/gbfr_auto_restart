@@ -1,12 +1,19 @@
 [project]
 name = "gbfr-auto-restart"
-version = "0.2.0.dev-0"
+version = "0.2.0"
 description = "Granblue Fantasy Relink Auto Restart"
 authors = [{ name = "Dowon", email = "ks2515@naver.com" }]
 dependencies = ["pyscreeze", "pillow", "rich", "opencv-python"]
 requires-python = ">=3.9"
 readme = "README.md"
 license = { text = "MIT" }
+keywords = ["gbfr"]
+classifiers = [
+    "Topic :: Games/Entertainment",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: MIT License",
+]
 
 [project.optional-dependencies]
 dev = ["black", "ruff", "pre-commit"]
