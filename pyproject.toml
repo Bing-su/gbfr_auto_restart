@@ -1,6 +1,6 @@
 [project]
 name = "gbfr-auto-restart"
-version = "0.2.0"
+version = "0.2.1"
 description = "Granblue Fantasy Relink Auto Restart"
 authors = [{ name = "Dowon", email = "ks2515@naver.com" }]
 dependencies = ["pyscreeze", "pillow", "rich", "opencv-python"]
@@ -18,6 +18,9 @@ classifiers = [
 [project.optional-dependencies]
 dev = ["black", "ruff", "pre-commit"]
 build = ["nuitka>=2.0.3"]
+
+[project.urls]
+repository = "https://github.com/Bing-su/gbfr_auto_restart"
 
 [project.scripts]
 gbfr_auto_restart = "gbfr_auto_restart:main"
