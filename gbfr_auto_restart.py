@@ -104,7 +104,10 @@ def found_any_image(images: dict[str, Image.Image]) -> bool:
             )  # pyright: ignore [reportCallIssue]
         except pyscreeze.ImageNotFoundException:
             continue
-        return result is not None
+
+        if result is None:
+            continue
+        return True
     return False
 
 
