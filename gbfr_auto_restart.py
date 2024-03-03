@@ -26,7 +26,7 @@ def found_any_image(images: dict[str, Image.Image]) -> bool:
     for image in images.values():
         try:
             result = pyscreeze.locateCenterOnScreen(
-                image, grayscale=False, confidence=0.95
+                image, grayscale=False, confidence=0.9
             )  # pyright: ignore [reportCallIssue]
         except pyscreeze.ImageNotFoundException:
             continue
