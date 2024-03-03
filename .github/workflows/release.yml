@@ -28,13 +28,13 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: gbfr_auto_restart
-          path: gbfr_auto_restart.exe
+          path: build/gbfr_auto_restart.exe
 
       - uses: softprops/action-gh-release@master
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            gbfr_auto_restart.exe
+            build/gbfr_auto_restart.exe
 
       - name: Publish to PyPI
         run: pdm publish

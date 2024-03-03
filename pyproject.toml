@@ -48,6 +48,7 @@ exe = { cmd = [
     "nuitka",
     "--assume-yes-for-downloads",
     "--onefile",
+    "--output-dir=build",
     "gbfr_auto_restart.py",
 ] }
 
